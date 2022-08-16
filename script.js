@@ -29,30 +29,45 @@
 //## Pazar -> Self-Study
 //## Aksi takdirde -> Yanlis gun girildi.
 
-let day = prompt (`bugün hangi gün lütfen giriniz`).toLowerCase();
-switch (day) {
-    case `pazartesi`:
-        faaliyet =`Inclass`;
-    break;
-    case `salı`:
-        faaliyet =`Inclass`;
-    break;
-    case `çarşamba`:
-        faaliyet =`Inclass`;
-    break;
-    case `perşembe`:
-        faaliyet =`Inclass`;
-    break;
-    case `cuma`:
-        faaliyet=`Teamwork`;
-    break;
-    case `cumartesi`:
-        faaliyet=`InClass + Workshop`;
-    break;
-    case `pazar`:
-        faaliyet=`Self-Study`;
-    break;
-    default:
-        faaliyet=`Yanlış bir şey girdiniz`;
-}
-console.log(`Bugün ki faaliyetiniz: ${faaliyet}`);
+//let day = prompt (`bugün hangi gün lütfen giriniz`).toLowerCase();
+//switch (day) {
+   // case `pazartesi`:
+    //    faaliyet =`Inclass`;
+    //break;
+    //case `salı`:
+     //   faaliyet =`Inclass`;
+    //break;
+    //case `çarşamba`:
+     //   faaliyet =`Inclass`;
+    //break;
+    //case `perşembe`:
+      //  faaliyet =`Inclass`;
+    //break;
+    //case `cuma`:
+      //  faaliyet=`Teamwork`;
+    //break;
+    //case `cumartesi`:
+       // faaliyet=`InClass + Workshop`;
+    //break;
+    //case `pazar`:
+       // faaliyet=`Self-Study`;
+    //break;
+    //default:
+        //faaliyet=`Yanlış bir şey girdiniz`;
+//}
+//console.log(`Bugün ki faaliyetiniz: ${faaliyet}`);
+
+
+
+
+// ÖDEV3 -ODEV3:Maasi asgari ucretten az olanlara %50 zam,
+//fazla olanlara ise %10 zam yapmak istiyoruz.
+
+
+let maas = +prompt (`lütfen maaşınızı giriniz`);
+let aücret = 5250
+if (maas >= aücret)
+      {ücret = maas*110/100}
+else if (maas < aücret)
+      {ücret = maas*150/100}
+   console.log(`yeni maaşınız: ${ücret}`)
