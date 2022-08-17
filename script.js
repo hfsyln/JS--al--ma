@@ -1,3 +1,4 @@
+
 // ÖDEV1 -HESAP MAKİNASI(2 SAYI 1 İŞLEM İSTE)-
 
 //let numb1= +prompt(`enter your first number`)
@@ -19,6 +20,8 @@
     //console.log(result)
     // else 
     //console.log(`geçerli değerler giriniz`)
+
+
 
 
 // ÖDEV2 -Clarusway’deki haftalık ders ve etkinlik programınızı, 
@@ -60,14 +63,35 @@
 
 
 
+
+
 // ÖDEV3 -ODEV3:Maasi asgari ucretten az olanlara %50 zam,
 //fazla olanlara ise %10 zam yapmak istiyoruz.
 
 
-let maas = +prompt (`lütfen maaşınızı giriniz`);
+//let maas = +prompt (`lütfen maaşınızı giriniz`);
+//let aücret = 5250
+//if (maas >= aücret)
+   //   {ücret = maas*110/100}
+//else if (maas < aücret)
+     // {ücret = maas*150/100}
+   //console.log(`yeni maaşınız: ${ücret}`)
+
+
+
+
+
+
+
+//# ODEV4: Kredi Risk Programı
+//## Console’dan kişinin gelir ve gider miktarını alan
+//## eğer kişinin geliri giderinden en az asgari ücret kadar fazla ise Kredi Verilebilir :money_mouth_face:
+//## değilse Kredi Verilemez :pleading_face:
+//## şeklinde çıktı veren kodu Ternary deyimi kullanarak yazınız.
+
+let gelir = +prompt(`aylık gelirinizi yazınız`);
+let gider = +prompt(`aylık giderinizi yazınız`);
 let aücret = 5250
-if (maas >= aücret)
-      {ücret = maas*110/100}
-else if (maas < aücret)
-      {ücret = maas*150/100}
-   console.log(`yeni maaşınız: ${ücret}`)
+let sonuç = (gelir >= gider + aücret) ? console.log (`kredi kullanabilir`) 
+      : console.log(`kredi kullanamaz`)
+  
