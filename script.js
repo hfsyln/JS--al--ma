@@ -147,15 +147,30 @@
 
 //**************************
 
-//ÖDEV: Klavyeden Q veya q karakteri girilene kadar not girişi yapan ve 
+//ÖDEV5: Klavyeden Q veya q karakteri girilene kadar not girişi yapan ve 
 //bu karakterlerden birisi girildiğinde O ana kadar girilen tüm notların
  //ortalamasını hesaplayarak konsola ortalamayı bastıran uygulamayı yazınız.
 
+ //let toplam = 0
+ //let n = 0
+ 
+ //while(true){
+  //let girilen = prompt(`lütfen alınan puanı giriniz çıkmak için q/Q ya tuşlayınız`);
+   // if( girilen == "q" || girilen == "Q" ){
+    //console.log(`işlemler sona erdi`)
+     //   break 
+  //} else if ( Number(girilen)>0 && Number(girilen)<=100){
+   // toplam += +girilen
+    //n += +1
+   // let ort = toplam /n
+   // console.log(`toplam: ${toplam}`)
+    //console.log(`ortalama : ${ort}`)
+  //} else{
+    //console.log(`hatalı giriş yapıldı`)}
+  //}
 
 
-
-
-
+ // ***** 5 HAKLI TAHMİN OYUNU *********** SUDO KOD ===>>>>>
 //* 1- hak =5
 //* 2- Raskele sayı tut (0-100)
 //* 3- Kullanıcan tahmin iste (tahmın)
@@ -172,6 +187,142 @@
 //*       print(üzgünüz)
 
 
+//* let hak = 5;
+//const rastgele = Math.round(Math.random()*100);
+//let tahmin;
+//let istek = true;
+
+//while(istek){
+    //do{
+       // tahmin = Number(prompt("tahmin sayiyi giriniz:"));
+      //  hak-=1;
+       // if(tahmin===rastgele){
+         //   console.log(`Tebrikler ${5-hak} kere de bildiniz.`)
+       //     break;
+       // }else if(tahmin<rastgele){
+       //     console.log("Arttır")
+       // }else if(tahmin>rastgele){
+       //     console.log("Azalt")
+      //  }
+    //}while(hak>0);
+    
+   // if(tahmin!==rastgele){
+     //   console.log("Uzgunuz oyunu kaybettiniz")
+    //}
+
+   // const tercih = prompt("Tekrar oynamak ister misiniz? E veya e giriniz!")
+   // if(tercih === "E" || tercih === 'e'){
+   //     istek = true;
+   //     hak=5;
+ //   }else if(tercih !== 'E' || tercih !== 'e'){
+  //      istek = false;
+ //   }
+//}
+
+
+//! Bir parametreyi cagirma sirasinda kullanmaz isek onun
+//! yerine default parametre atayabiliriz. Ornekteki lastName
+//! parametresi icin default değer olarak '' atanmistir.
+
+// !------------------------------------------------
+// ! 1.YONTEM  : FUNCTION DECLARATION
+// !------------------------------------------------
+
+console.log("**** FUNC DECLARATION ******");
+
+//* ORNEK:
+//************************************************/
+yazdir();
+
+//! Fonksiyonun tanimlanmasi (declaration)
+function yazdir() {
+  console.log("merhaba");
+}
+
+yazdir(); //! invoke, call, cagirma
+yazdir();
+
+//* ORNEK2:
+//*************************************************/
+
+function selamla(ad, soyAd = "") {
+  console.log(`Merhaba ${ad} ${soyAd}`);
+}
+
+selamla("Can", "Yilmaz");
+selamla("Canan", "Ozturk");
+selamla("Ayse");
+selamla("John");
+
+//! Bir parametreyi cagirma sirasinda kullanmaz isek onun
+//! yerine default parametre atayabiliriz. Ornekteki lastName
+//! parametresi icin default değer olarak '' atanmistir.
+
+//* ORNEK3:
+//***************************************************/
+
+function yasHesapla(isim, dogumTarihi) {
+  // const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir.`;
+  // const sonuc = `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
+  // return sonuc;
+  return `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
+}
+
+const mesaj1 = yasHesapla("Elif Can", 1990);
+console.log(mesaj1);
+console.log(yasHesapla("Veli Canan", 1980));
+
+//* ORNEK4:
+//*****************************************************/
+
+function tekCift(sayi) {
+  return sayi % 2 ? `${sayi} TEKTIR` : `${sayi} CIFTTIR`;
+}
+
+console.log(tekCift(5));
+console.log(tekCift(2));
+
+
+//* ORNEK:
+//***************************************************/
+// function tekCift(sayi) {
+//   return sayi % 2 ? `${sayi} TEKTIR` : `${sayi} CIFTTIR`;
+// }
+
+//! Cannot access 'tekCift1' before initialization  at
+// console.log(tekCift1(9));
+
+//! Funct Expression yontemi ile tanimlama
+const tekCift1 = function (sayi) {
+  return sayi % 2 ? `${sayi} TEKTIR` : `${sayi} CIFTTIR`;
+};
+
+console.log(tekCift1(5));
+
+
+
+const buyukBul =function(n1, n2, n3= -Number.MAX_VALUE){
+  let enBuyuk;
+  if (n1 >= n2 && n1 >= n3) {
+    enBuyuk = n1;
+
+  } else if (n2 >= n1 && n2 >= n3) {
+    enBuyuk = n2
+
+  } else if (n3 >= n1 && n3 >= n2) {
+    enBuyuk = n3
+
+  }
+  return ; enBuyuk;
+
+
+};
+
+const n1 = +prompt("Sayi1:");
+const n2 = +prompt("Sayi2:");
+const n3 = +prompt("Sayi3:");
+
+console.log("Girilen sayıların en buyugu :", buyukBul(n1, n2, n3));
 
 
 
