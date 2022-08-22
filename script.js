@@ -10,18 +10,16 @@
 //let result = 0
 
     //if (oprt == `+`)
-        //{result = (numb1 + numb2)}
+       // {result = (numb1 + numb2)}
     //else if (oprt == `-`)
        // {result = (numb1 - numb2)}
     //else if (oprt == `/`)
        // {result = (numb1 / numb2)}
     //else if (oprt == `*`)
-        //{result = (numb1 * numb2)};
+      //  {result = (numb1 * numb2)};
     //console.log(result)
-    // else 
-    //console.log(`geçerli değerler giriniz`)
-
-
+    //else
+      //console.log(`geçerli değerler giriniz`)
 // ÖDEV2 -Clarusway’deki haftalık ders ve etkinlik programınızı, 
 // console’dan girilen gün değerine göre çıktı veren kodu switch-case yapısı ile yazınız.
 //## Pazartesi, Salı ,Çarşamba, Perşembe -> InClass
@@ -228,31 +226,31 @@
 // ! 1.YONTEM  : FUNCTION DECLARATION
 // !------------------------------------------------
 
-console.log("**** FUNC DECLARATION ******");
+//console.log("**** FUNC DECLARATION ******");
 
 //* ORNEK:
 //************************************************/
-yazdir();
+//yazdir();
 
 //! Fonksiyonun tanimlanmasi (declaration)
-function yazdir() {
-  console.log("merhaba");
-}
+//function yazdir() {
+ // console.log("merhaba");
+//}
 
-yazdir(); //! invoke, call, cagirma
-yazdir();
+//yazdir(); //! invoke, call, cagirma
+//yazdir();
 
 //* ORNEK2:
 //*************************************************/
 
-function selamla(ad, soyAd = "") {
-  console.log(`Merhaba ${ad} ${soyAd}`);
-}
+//function selamla(ad, soyAd = "") {
+//  console.log(`Merhaba ${ad} ${soyAd}`);
+//}
 
-selamla("Can", "Yilmaz");
-selamla("Canan", "Ozturk");
-selamla("Ayse");
-selamla("John");
+//selamla("Can", "Yilmaz");
+//selamla("Canan", "Ozturk");
+//selamla("Ayse");
+//selamla("John");
 
 //! Bir parametreyi cagirma sirasinda kullanmaz isek onun
 //! yerine default parametre atayabiliriz. Ornekteki lastName
@@ -261,26 +259,26 @@ selamla("John");
 //* ORNEK3:
 //***************************************************/
 
-function yasHesapla(isim, dogumTarihi) {
+//function yasHesapla(isim, dogumTarihi) {
   // const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir.`;
   // const sonuc = `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
   // return sonuc;
-  return `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
-}
+  //return `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
+//}
 
-const mesaj1 = yasHesapla("Elif Can", 1990);
-console.log(mesaj1);
-console.log(yasHesapla("Veli Canan", 1980));
+//const mesaj1 = yasHesapla("Elif Can", 1990);
+//console.log(mesaj1);
+//console.log(yasHesapla("Veli Canan", 1980));
 
 //* ORNEK4:
 //*****************************************************/
 
-function tekCift(sayi) {
-  return sayi % 2 ? `${sayi} TEKTIR` : `${sayi} CIFTTIR`;
-}
+//function tekCift(sayi) {
+ // return sayi % 2 ? `${sayi} TEKTIR` : `${sayi} CIFTTIR`;
+//}
 
-console.log(tekCift(5));
-console.log(tekCift(2));
+//console.log(tekCift(5));
+//console.log(tekCift(2));
 
 
 //* ORNEK:
@@ -293,38 +291,89 @@ console.log(tekCift(2));
 // console.log(tekCift1(9));
 
 //! Funct Expression yontemi ile tanimlama
-const tekCift1 = function (sayi) {
-  return sayi % 2 ? `${sayi} TEKTIR` : `${sayi} CIFTTIR`;
-};
+//const tekCift1 = function (sayi) {
+  //return sayi % 2 ? `${sayi} TEKTIR` : `${sayi} CIFTTIR`;
+//};
 
-console.log(tekCift1(5));
-
-
-
-const buyukBul =function(n1, n2, n3= -Number.MAX_VALUE){
-  let enBuyuk;
-  if (n1 >= n2 && n1 >= n3) {
-    enBuyuk = n1;
-
-  } else if (n2 >= n1 && n2 >= n3) {
-    enBuyuk = n2
-
-  } else if (n3 >= n1 && n3 >= n2) {
-    enBuyuk = n3
-
-  }
-  return ; enBuyuk;
-
-
-};
-
-const n1 = +prompt("Sayi1:");
-const n2 = +prompt("Sayi2:");
-const n3 = +prompt("Sayi3:");
-
-console.log("Girilen sayıların en buyugu :", buyukBul(n1, n2, n3));
+//console.log(tekCift1(5));
 
 
 
+//const buyukBul =function(n1, n2, n3= -Number.MAX_VALUE){
+ // let enBuyuk;
+ // if (n1 >= n2 && n1 >= n3) {
+ //   enBuyuk = n1;
+
+ // } else if (n2 >= n1 && n2 >= n3) {
+ //   enBuyuk = n2
+
+ // } else if (n3 >= n1 && n3 >= n2) {
+ //   enBuyuk = n3
+
+ // }
+ // return ; enBuyuk;
+
+
+//};
+
+//const n1 = +prompt("Sayi1:");
+///const n2 = +prompt("Sayi2:");
+//const n3 = +prompt("Sayi3:");
+
+//console.log("Girilen sayıların en buyugu :", buyukBul(n1, n2, n3));
+
+
+
+//let sentence = `hello world bu nasıl iş böyle`
+//let a = sentence.split(" ")
+//console.log(a)
+
+
+// ? ===============================================
+// ?               FONKSİYONLAR
+// ? ===============================================
+
+// !------------------------------------------------
+// ! 3.YONTEM  : ARROW FUNCTION
+// !------------------------------------------------
+
+//console.log("**** ARROW ******");
+
+//* ORNEK: Silindir Hacmi
+//************************************************/
+
+//const r = Number(prompt("yaricap giriniz:"));
+//const h = Number(prompt("yukseklik giriniz:"));
+
+//const hacimHesapla = (r, h) => Math.PI * r * r * h;
+
+// console.log(`${r} , ${h} => Hacmi: ${hacimHesapla(r, h).toExponential()}`);
+//console.log(`${r} , ${h} => Hacmi: ${hacimHesapla(r, h).toFixed(2)}`);
+
+//* ORNEK: Yas hesapla
+//************************************************/
+
+//const tarih = Number(prompt("Dogum Tarihini giriniz:"));
+
+//! Arrow Func yontemi ile tanimlama
+//const yasHesapla = (tarih) => {
+  //const yas = new Date().getFullYear() - tarih;
+  //return yas;
+//};
+
+// console.log("YASINIZ:" + yasHesapla2(tarih));
+//!Funct expression ve arrow func yontemlerinde
+//! Once fonks tanimlanmalidir sonra cagrilmalidir.
+//! Aksi takdirde hata alrsiniz.
+
+//! Func Expression yontemi ile tanimlama
+//const yasHesapla2 = function (tarih) {
+  //const yas = new Date().getFullYear() - tarih;
+  //return yas;
+//};
+
+//console.log("YASINIZ:" + yasHesapla(tarih));
+
+//const sentence = prompt("lütfen bi cümle giriniz")
 
 
