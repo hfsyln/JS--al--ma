@@ -377,3 +377,77 @@
 //const sentence = prompt("lütfen bi cümle giriniz")
 
 
+//*********************************ÖRNEK */
+//!Run Length
+//!Have the function RunLength(str) take the str parameter being passed and return a compressed version of the string using the Run-length encoding algorithm. This algorithm works by taking the occurrence of each repeating character and outputting that number along with a single character of the repeating sequence. For example: "wwwggopp" would return 3w2g1o2p. The string will not contain any numbers, punctuation, or symbols.
+//function runLength(str) {
+  // solution 1
+ // let result = [];
+  //let arr = str.toLowerCase().split("").join("").match(/(.)\1*/g);
+  //for (let i = 0; i < arr.length; i++) {
+    //result.push(arr[i].length + arr[i][0]);
+  //}
+  //console.log(arr)
+  //console.log(arr.length)
+ // return result.join("") }
+ 
+  //console.log(runLength(`hello world`))
+
+
+
+  //***********************************ÖRNEK********** */
+  //!Have the function LetterCount(str) take the str parameter being passed and return the first word with the
+//!greatest number of repeated letters.
+//!For example: "Today, is the greatest day ever!" should return greatest because it has 2 e's (and 2 t's) and it comes before ever which also has 2 e's. If there are no words with repeating letters return -1.
+//!Words will be separated by spaces.
+
+//unction letterCount(str) {
+//  let count2 = 0;
+//  let count1 = 0;
+//  let greatestWord = "";
+//  let newArr = str.split(" ");
+//  for (const x of newArr) {
+  //  for (const y of x) {
+  //    for (var i = 0; i < x.length; i++) {
+    //    if (x[i] == y) {
+     //     count1++;
+     //   }
+      //}
+     // if (count1 > count2) {
+    //    count2 = count1;
+     //   greatestWord = x;
+     //   count1 = 0;
+     // } else {
+      //  count1 = 0;
+    //  }
+   // }
+ // }
+  //if (count2 >= 2) {
+ //   return greatestWord;
+ // } else {
+ //   return -1;
+ /// }
+//}
+
+//*******************************ÖRNEK***** */
+//For a = [2, 1, 3, 5, 3, 2], the output should be solution(a) = 3.
+//There are 2 duplicates: numbers 2 and 3. The second occurrence of 3 has a smaller index than the second occurrence of 2, so the answer is 3.
+//For a = [2, 2], the output should be solution(a) = 2;
+//For a = [2, 4, 3, 5, 1], the output should be solution(a) = -1.
+
+//function firstDuplicate(arr) {
+ // let elementSet = new Set();
+ // console.log(elementSet)
+ // for (let i = 0; i < arr.length; i++) {
+//    if (elementSet.has(arr[i])) return arr[i];
+//    elementSet.add(arr[i]);
+ //   console.log(elementSet)
+    
+    
+ // }
+//  return -1;
+  
+
+//}
+
+//console.log(firstDuplicate([2, 1, 3, 5, 3, 2]))
