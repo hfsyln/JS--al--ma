@@ -452,6 +452,10 @@
 
 //console.log(firstDuplicate([2, 1, 3, 5, 3, 2]))
 
+
+
+//F-1450 David Moses
+//:house_with_garden: Yesterday at 5:47 PM
 // Write a JavaScript program to determine a year is a leap year in the Gregorian calendar. (Please search the conditions for the leap year)
 
 // pseudocode:
@@ -462,68 +466,45 @@
 
 
 // first way:
-const isLeapYear = (year) => {
-  if (year % 100 === 0) {
-      if (year % 400 === 0) {
-          console.log(`${year} is a leap year.`);
-      } else {
-          console.log(`${year} is not a leap year.`);
-      }
-  } else {
-      if (year % 4 === 0) {
-          console.log(`${year} is a leap year.`);
-      } else {
-          console.log(`${year} is not a leap year.`);
-      }
-  }
-}
+//const isLeapYear = (year) => {
+ //   if (year % 100 === 0) {
+ //       if (year % 400 === 0) {
+  //          console.log(`${year} is a leap year.`);
+  //      } else {
+  //          console.log(`${year} is not a leap year.`);
+  //      }
+    //} else {
+     //   if (year % 4 === 0) {
+     //       console.log(`${year} is a leap year.`);
+      //  } else {
+      //      console.log(`${year} is not a leap year.`);
+      //  }
+   // }
+//}
 
-isLeapYear(64);
-isLeapYear(1900);
-isLeapYear(2000);
-isLeapYear(1912);
-
-// second way:
-function leapYear(year) {
-  return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
-}
-
-// Write a JavaScript program to determine a year is a leap year in the Gregorian calendar. (Please search the conditions for the leap year)
-
-// pseudocode:
-
-// (0-99) only divisible by 4 --> leap year
-// (100-400) divided by 4 and  if not divisible by 100 --> leap year
-// if divisible by 100 and divisible by 400 --> leap year
-
-
-// first way:
-const isLeapYear = (year) => {
-  if (year % 100 === 0) {
-      if (year % 400 === 0) {
-          console.log(`${year} is a leap year.`);
-      } else {
-          console.log(`${year} is not a leap year.`);
-      }
-  } else {
-      if (year % 4 === 0) {
-          console.log(`${year} is a leap year.`);
-      } else {
-          console.log(`${year} is not a leap year.`);
-      }
-  }
-}
-
-isLeapYear(64);
-isLeapYear(1900);
-isLeapYear(2000);
-isLeapYear(1912);
+//isLeapYear(64);
+//isLeapYear(1900);
+//isLeapYear(2000);
+//isLeapYear(1912);
 
 // second way:
-function leapYear(year) {
-  return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
-}
+//function leapYear(year) {
+    //return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+//}
+//:david-moses:
+//11
+///:eyvallah:
+//7
 
+
+
+
+
+//3 replies
+
+
+//F-1450 David Moses
+//:house_with_garden:  1 day ago
 // Write a JavaScript code to find the area of a triangle.
 
 // pseudocode:
@@ -533,10 +514,10 @@ function leapYear(year) {
 // s = (a + b + c) / 2
 // (s(s-a)(s-b)(s-c))**0.5
 
-const areaOfTriangle = (a, b, c) => {
-  let s = (a + b + c) / 2;
-  return (s * (s - a) * (s - b) * (s - c)) ** 0.5;
-};
+//const areaOfTriangle = (a, b, c) => {
+ //   let s = (a + b + c) / 2;
+  //  return (s * (s - a) * (s - b) * (s - c)) ** 0.5;
+//};
 
 // console.log(areaOfTriangle(3, 4, 5));
 
@@ -547,18 +528,20 @@ const areaOfTriangle = (a, b, c) => {
 // if false 20 - given number
 // if true abs((20 - given number) * 2) or multiply * (-1)
 
-const absoluteResult = (num) => {
-  if (num < 20) {
-      return 20 - num;
-  } else {
-      return Math.abs((20-num) * 2);
-  }
-};
+//const absoluteResult = (num) => {
+  //  if (num < 20) {
+    //    return 20 - num;
+   // } else {
+   //     return Math.abs((20-num) * 2);
+    //}
+//};
 
 // console.log(absoluteResult(15));
 // console.log(absoluteResult(35));
 
 
+//F-1450 David Moses
+//:house_with_garden:  1 day ago
 // Write a JavaScript program that takes two integers from a user and displays the larger.
 
 // pseudocode:
@@ -569,96 +552,45 @@ const absoluteResult = (num) => {
 // let number1 =  5;//prompt('pls enter a number');
 // let number2 =  6;//prompt('pls enter second number');
 
-const largerNumOfTwo = (number1, number2) => {
-  if (number1 > number2) {
-      return `${number1} is greater than ${number2}`;
-  } else if (number1 === number2) {
-      return `${number1} equals ${number2}`;
-  } else {
-      return `${number2} is greater than ${number1}`;
+//const largerNumOfTwo = (number1, number2) => {
+ //   if (number1 > number2) {
+  ///      return `${number1} is greater than ${number2}`;
+  //  } else if (number1 === number2) {
+   //     return `${number1} equals ${number2}`;
+   // } else {
+    //    return `${number2} is greater than ${number1}`;
 
-  }
-};
-
-// console.log(largerNumOfTwo(5, 6));
-
-
-// Write a JavaScript program that takes 3 integers from a user and displays the largest.
-
-const largestNumOfThree = (number1, number2, number3) => {  // array ise spread ile açmak gerekir
-  // return Math.max(...[number1, number2, number3]);
-  let largest;
-
-
-  if (number1 > number2 && number1 > number3) {
-      largest = number1;
-  }
-
-  else if (number2 > number1 && number2 > number3) {
-      largest = number2;
-
-  }
-  else {
-      largest = number3;
-  }
-  return `${largest} is the largest`;
-};
-
-// console.log(largestNumOfThree(2, 6, 9));
-
-// Write a JavaScript program that takes two integers from a user and displays the larger.
-
-// pseudocode:
-// get two numbers
-// compare them with if first greater than second one 
-// compare them with else first equals or smaller than second one 
-
-// let number1 =  5;//prompt('pls enter a number');
-// let number2 =  6;//prompt('pls enter second number');
-
-const largerNumOfTwo = (number1, number2) => {
-  if (number1 > number2) {
-      return `${number1} is greater than ${number2}`;
-  } else if (number1 === number2) {
-      return `${number1} equals ${number2}`;
-  } else {
-      return `${number2} is greater than ${number1}`;
-
-  }
-};
+   // }
+//};
 
 // console.log(largerNumOfTwo(5, 6));
 
 
 // Write a JavaScript program that takes 3 integers from a user and displays the largest.
 
-const largestNumOfThree = (number1, number2, number3) => {  // array ise spread ile açmak gerekir
-  // return Math.max(...[number1, number2, number3]);
-  let largest;
+//const largestNumOfThree = (number1, number2, number3) => {  // array ise spread ile açmak gerekir
+    // return Math.max(...[number1, number2, number3]);
+    //let largest;
 
 
-  if (number1 > number2 && number1 > number3) {
-      largest = number1;
-  }
+    //if (number1 > number2 && number1 > number3) {
+    //    largest = number1;
+   // }
 
-  else if (number2 > number1 && number2 > number3) {
-      largest = number2;
-
-  }
-  else {
-      largest = number3;
-  }
-  return `${largest} is the largest`;
-};
+   // else if (number2 > number1 && number2 > number3) {
+     //   largest = number2;
+//
+   // }
+   // else {
+   //     largest = number3;
+   // }
+   // return `${largest} is the largest`;
+//};
 
 // console.log(largestNumOfThree(2, 6, 9));
 
 
 
-
-
-F-1450 David Moses
-:house_with_garden:  1 day ago
 // Write a JavaScript program that takes 3 integers from a user, multiplies all these numbers, and displays the sign of the product.
 // Example1: 
 // number1 = 5, number2 = -4, number3 = 2 ⇒ product is -40. Then the sign is "-"
@@ -668,10 +600,10 @@ F-1450 David Moses
 // pseudocode:
 // if product is greater than zero sign is + else -
 
-const multiplyOfThreeNum = (numee1, numee2, numee3) => {
-  let product = numee1 * numee2 * numee3;
-  return product > 0 ? "the sign is +" : "the sign is -";
-};
+//const multiplyOfThreeNum = (numee1, numee2, numee3) => {
+ //   let product = numee1 * numee2 * numee3;
+  ///  return product > 0 ? "the sign is +" : "the sign is -";
+//};
 
 // console.log(multiplyOfThreeNum(1, -8, 75));
 
@@ -681,13 +613,13 @@ const multiplyOfThreeNum = (numee1, numee2, numee3) => {
 // if num is greater than 50 && is smaller than 100 => num is in the range 50 to 100;
 // else num is not in the range 50 to 100;
 
-const isInTheRange50To100 = (numberee) => {
-  if (numberee > 50 && numberee < 100) {
-      return `${numberee} is in the range 50 to 100`;
-  } else {
-      return `${numberee} is NOT in the range 50 to 100`;
-  }
-};
+///const isInTheRange50To100 = (numberee) => {
+   // if (numberee > 50 && numberee < 100) {
+    //    return `${numberee} is in the range 50 to 100`;
+    //} else {
+    //    return `${numberee} is NOT in the range 50 to 100`;
+    //}
+//};
 
 // console.log(isInTheRange50To100(51));
 // console.log(isInTheRange50To100(49));
@@ -700,28 +632,28 @@ const isInTheRange50To100 = (numberee) => {
 // parameters a, b, operand
 // switch case
 
-const calc = (a, b, operand) => {
-  let result;
-
-  switch (operand) {
-      case '+':
-          result = a + b;    
-          break;
-      case '-':
-          result = a - b;
-          break;
-      case '/':
-          result = a / b;    
-          break;
-      case '*':
-          result = a * b;    
-          break;
-  
-      default:
-          return 'invalid process'; 
-  }
-  return result;
-};
+//const calc = (a, b, operand) => {
+//    let result;
+//
+ //   switch (operand) {
+ //       case '+':
+ //           result = a + b;    
+ //           break;
+  //      case '-':
+  //          result = a - b;
+   //         break;
+   //     case '/':
+   //         result = a / b;    
+    //        break;
+    //    case '*':
+     //       result = a * b;    
+     //       break;
+    
+       // default:
+      //      return 'invalid process'; 
+    //}
+  //  return result;
+//};
 
 // console.log(calc(2, 9, '+'));
 // console.log(calc(2, 9, '-'));
@@ -736,29 +668,29 @@ const calc = (a, b, operand) => {
 // Example2:
 // input = Saturday⇒ output: Saturday is not a weekday
 
-const isWeekday = (day) => {
-  let res;
+//const isWeekday = (day) => {
+//    let res;
 
-  switch (day.toLowerCase()) {
-      case "monday":
-      case "tuesday":
-      case "wednesday":
-      case "thursday":
-      case "friday":
-          res = `${day} is a weekday`;
+  //  switch (day.toLowerCase()) {
+  //      case "monday":
+  //      case "tuesday":
+   //     case "wednesday":
+   //     case "thursday":
+   //     case "friday":
+    //        res = `${day} is a weekday`;
 
-          break;
-      case "saturday":
-      case "sunday":
-          res = `${day} is NOT a weekday`;
+     //       break;
+       // case "saturday":
+       // case "sunday":
+        //    res = `${day} is NOT a weekday`;
 
-          break;
+        //    break;
 
-      default:
-          return 'invalid process';
-  };
-  return res;
-};
+        //default:
+         //   return 'invalid process';
+    //};
+   // return res;
+//};
 
 // console.log(isWeekday('MONDAY'));
 // console.log(isWeekday('Saturday'));
@@ -770,10 +702,10 @@ const isWeekday = (day) => {
 // pseudocode: 
 // num % 2
 
-const oddOrEven = (x) => {
-  // return x % 2 === 0 ? 'even' : 'odd';
-  return x % 2 ? 'odd' : 'even';
-};
+//onst oddOrEven = (x) => {
+    // return x % 2 === 0 ? 'even' : 'odd';
+  //  return x % 2 ? 'odd' : 'even';
+//};
 
 // console.log(oddOrEven(2));
 // console.log(oddOrEven(3));
@@ -785,19 +717,77 @@ const oddOrEven = (x) => {
 // pseudocode:
 // smaller result difference from 100 is the nearest
 
-const nearestNum = (y, z) => {
-  let diffY = Math.abs(100 - y);
-  let diffZ = Math.abs(100 - z);
+//const nearestNum = (y, z) => {
+  //  let diffY = Math.abs(100 - y);
+  // let diffZ = Math.abs(100 - z);
 
-  if (diffY > diffZ) {
-      return `${z} is the nearest to 100`;
-  } else if (diffY === diffZ) {
-      return `they are equally close`;
-  } else {
-      return `${y} is the nearest to 100`;
-  }
-};
+   // if (diffY > diffZ) {
+   //     return `${z} is the nearest to 100`;
+//} //else if (diffY === diffZ) {
+  //      return `they are equally close`;
+ //   } else {
+   //     return `${y} is the nearest to 100`;
+   // }
+//};
 
 // console.log(nearestNum(25, -96));
 // console.log(nearestNum(95, 105));
 // console.log(nearestNum(98, 99));
+
+const toLatin = {
+  "I" : 1,
+  "V": 5,
+  "X":10,
+  "L":50,
+  "C" : 100,
+  "D" : 500,
+  "M" : 1000
+}
+
+const willBeTranslated = "III"
+let total = toLatin[willBeTranslated[willBeTranslated.length-1]]
+console.log(total)
+let beforeTheNum = toLatin[willBeTranslated[willBeTranslated.length-1]];
+console.log(beforeTheNum)
+const romanToLatin = (a) => {
+  const newArray = a.split("").reverse()
+  console.log(newArray)
+  for (let i of newArray.slice(1)){
+     if (toLatin[i] < beforeTheNum){
+          total -= toLatin[i];
+         beforeTheNum = toLatin[i];
+      }else{
+          total += toLatin[i];
+          beforeTheNum = toLatin[i]
+      }
+  }
+  return total
+}
+//console.log(romanToLatin(willBeTranslated))
+console.log(romanToLatin("MCMXC"))
+//(hatalı çözüm yapmışşşş splitin işlevi neee ve total neden 1 den başlıyor üstteki için)
+
+
+//let ert = "MCMXC";
+//let a = {
+ // "I": 1, "V":5 ,"X": 10,"L":50,"C":100,"D":500,"M":1000
+//};
+//let toplam = 0
+//nav = (ek) =>{
+//let at = ek.split("").reverse()
+//for (i=0;i< at.length;i++){
+   // if( i == (at.length - 1)){
+        //toplam +=  a[at[0]];
+        //return toplam 
+    //}
+    
+      //if (a[at[i]] == a[at[i + 1]]) {
+        //toplam += a[at[i]];
+      //} else if (a[at[i]] > a[at[i + 1]]) {
+       // toplam -=  a[at[i + 1]];
+      //} else {
+      //  toplam += a[at[i + 1]];
+      //}
+//}
+//}
+//console.log(nav("MCMXC"));
