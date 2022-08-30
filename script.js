@@ -1,5 +1,5 @@
 
-// ÖDEV1 -HESAP MAKİNASI(2 SAYI 1 İŞLEM İSTE)-
+//***************************************************** */ ÖDEV1 -HESAP MAKİNASI(2 SAYI 1 İŞLEM İSTE)-
 
 //let numb1= +prompt(`enter your first number`)
 //console.log(numb1)
@@ -20,7 +20,10 @@
     //console.log(result)
     //else
       //console.log(`geçerli değerler giriniz`)
-// ÖDEV2 -Clarusway’deki haftalık ders ve etkinlik programınızı, 
+
+
+
+//************************************* */ ÖDEV2 -Clarusway’deki haftalık ders ve etkinlik programınızı, 
 // console’dan girilen gün değerine göre çıktı veren kodu switch-case yapısı ile yazınız.
 //## Pazartesi, Salı ,Çarşamba, Perşembe -> InClass
 //## Cuma -> Teamwork
@@ -57,7 +60,7 @@
 //console.log(`Bugün ki faaliyetiniz: ${faaliyet}`);
 
 
-// ÖDEV3 -ODEV3:Maasi asgari ucretten az olanlara %50 zam,
+//*********************************************************** */ ÖDEV3 -ODEV3:Maasi asgari ucretten az olanlara %50 zam,
 //fazla olanlara ise %10 zam yapmak istiyoruz.
 
 
@@ -70,7 +73,7 @@
    //console.log(`yeni maaşınız: ${ücret}`)
 
 
-//# ODEV4: Kredi Risk Programı
+//**************************************************************** */ ODEV4: Kredi Risk Programı
 //## Console’dan kişinin gelir ve gider miktarını alan
 //## eğer kişinin geliri giderinden en az asgari ücret kadar fazla ise Kredi Verilebilir :money_mouth_face:
 //## değilse Kredi Verilemez :pleading_face:
@@ -83,8 +86,8 @@
  //     : console.log(`kredi kullanamaz`)
   
 
- // asal sayıları bulma
-
+ //********************************************************************* */ asal sayıları bulma
+//*******************1.yöntem
  //let girilen = +prompt(`lütfen bir sayı giriniz`);
  //let arttır = 0;
  //if (girilen < 2 ){
@@ -97,7 +100,7 @@
     //  }
 //arttır > 0 ? (console.log(`girilen değer asal değilidr`)) : (console.log(`girilen değer asaldır`))}
 
-
+//***************** *2.yöntem
 //const sayi = Number(prompt("Pozitif Bir sayi giriniz:"));
 //let asal = true;
 
@@ -115,7 +118,7 @@
   //console.log(`${sayi} ${sonuc}`); }
 
 
-  //console.log("****** WHILE *******");
+  //********************************************************console.log("****** WHILE *******");
 
 //? ORNEK: Kullanicidan 0-100 arasinda bir not isteyen ve girilen not
 //? 0-100'den farkli ise Kullaciniyi uyararak yeniden 0-100 arasinda
@@ -143,9 +146,9 @@
 
 //console.log("Giridiginiz Not:", not1);
 
-//**************************
 
-//ÖDEV5: Klavyeden Q veya q karakteri girilene kadar not girişi yapan ve 
+
+//*****************************************************************ÖDEV5: Klavyeden Q veya q karakteri girilene kadar not girişi yapan ve 
 //bu karakterlerden birisi girildiğinde O ana kadar girilen tüm notların
  //ortalamasını hesaplayarak konsola ortalamayı bastıran uygulamayı yazınız.
 
@@ -168,7 +171,7 @@
   //}
 
 
- // ***** 5 HAKLI TAHMİN OYUNU *********** SUDO KOD ===>>>>>
+ // ********************************************************* 5 HAKLI TAHMİN OYUNU *********** SUDO KOD ===>>>>>
 //* 1- hak =5
 //* 2- Raskele sayı tut (0-100)
 //* 3- Kullanıcan tahmin iste (tahmın)
@@ -226,10 +229,10 @@
 // ! 1.YONTEM  : FUNCTION DECLARATION
 // !------------------------------------------------
 
-//console.log("**** FUNC DECLARATION ******");
+//*********************************************************console.log("**** FUNC DECLARATION ******");
 
 //* ORNEK:
-//************************************************/
+//********************************************* */
 //yazdir();
 
 //! Fonksiyonun tanimlanmasi (declaration)
@@ -298,7 +301,8 @@
 //console.log(tekCift1(5));
 
 
-
+//*ÖRNEK 
+//****************************************************** */
 //const buyukBul =function(n1, n2, n3= -Number.MAX_VALUE){
  // let enBuyuk;
  // if (n1 >= n2 && n1 >= n3) {
@@ -454,8 +458,9 @@
 
 
 
-//F-1450 David Moses
-//:house_with_garden: Yesterday at 5:47 PM
+//********************************ÖENEK SORU ÇÖZÜMLERİ -----29.08.2022------- */
+//******ÖRNEK 1 */
+
 // Write a JavaScript program to determine a year is a leap year in the Gregorian calendar. (Please search the conditions for the leap year)
 
 // pseudocode:
@@ -465,7 +470,7 @@
 // if divisible by 100 and divisible by 400 --> leap year
 
 
-// first way:
+//***** */ first way:
 //const isLeapYear = (year) => {
  //   if (year % 100 === 0) {
  //       if (year % 400 === 0) {
@@ -487,7 +492,7 @@
 //isLeapYear(2000);
 //isLeapYear(1912);
 
-// second way:
+//****** */ second way:
 //function leapYear(year) {
     //return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
 //}
@@ -497,14 +502,8 @@
 //7
 
 
+//*************************ÖRNEK2 */
 
-
-
-//3 replies
-
-
-//F-1450 David Moses
-//:house_with_garden:  1 day ago
 // Write a JavaScript code to find the area of a triangle.
 
 // pseudocode:
@@ -520,6 +519,9 @@
 //};
 
 // console.log(areaOfTriangle(3, 4, 5));
+
+
+//******************************ÖRNEK3 */
 
 // Write a JavaScript program to display the difference between a given number and 20, if the number is greater than 20 display double the absolute difference.
 
@@ -540,8 +542,8 @@
 // console.log(absoluteResult(35));
 
 
-//F-1450 David Moses
-//:house_with_garden:  1 day ago
+//*************************************ÖRNEK4 */
+
 // Write a JavaScript program that takes two integers from a user and displays the larger.
 
 // pseudocode:
@@ -565,6 +567,7 @@
 
 // console.log(largerNumOfTwo(5, 6));
 
+//*****************************ÖRNEK5 */
 
 // Write a JavaScript program that takes 3 integers from a user and displays the largest.
 
@@ -590,6 +593,7 @@
 // console.log(largestNumOfThree(2, 6, 9));
 
 
+//**************************ÖRNEK6 */
 
 // Write a JavaScript program that takes 3 integers from a user, multiplies all these numbers, and displays the sign of the product.
 // Example1: 
@@ -607,6 +611,10 @@
 
 // console.log(multiplyOfThreeNum(1, -8, 75));
 
+
+
+//********************************ÖRNEK7 */
+
 // Write a JavaScript program to check whether a given integer is in the range 50 to 100.
 
 // pseudocode:
@@ -623,6 +631,10 @@
 
 // console.log(isInTheRange50To100(51));
 // console.log(isInTheRange50To100(49));
+
+
+
+//***********************ÖRNEK8 */
 
 // Write a basic Calculator with JavaScript. Ask the user to enter 2 numbers and an operand (+,-,*,/). Execute the desired operation and display the result.
 
@@ -661,6 +673,7 @@
 // console.log(calc(2, 9, '*'));
 // console.log(calc(2, 9, 'ğ'));
 
+//****************************ÖRNEK9 */
 
 // Write a JavaScript program that asks the user to enter a day, check this day, and display whether a weekday or not.
 // Example1:
@@ -696,6 +709,7 @@
 // console.log(isWeekday('Saturday'));
 // console.log(isWeekday('osman'));
 
+//**********************************ÖRNEK10 */
 
 // Write a JavaScript program that tells the user provided number is odd or even.
 
@@ -711,6 +725,7 @@
 // console.log(oddOrEven(3));
 // console.log(oddOrEven(-1));
 
+//**********************************ÖRNEK11 */
 
 // Write a JavaScript program to find a value that is nearest to 100 from two different given integer values.
 
@@ -733,6 +748,12 @@
 // console.log(nearestNum(25, -96));
 // console.log(nearestNum(95, 105));
 // console.log(nearestNum(98, 99));
+
+
+
+
+//********************************ÖRNEK SORU(GRUP) */
+//****************ÇÖZÜM1
 
 const toLatin = {
   "I" : 1,
@@ -767,6 +788,7 @@ const romanToLatin = (a) => {
 console.log(romanToLatin("MCMXC"))
 //(hatalı çözüm yapmışşşş splitin işlevi neee ve total neden 1 den başlıyor üstteki için)
 
+//**********************ÇÖZÜM2 
 
 //let ert = "MCMXC";
 //let a = {
