@@ -755,7 +755,7 @@
 //********************************ÖRNEK SORU(GRUP) */
 //****************ÇÖZÜM1
 
-const toLatin = {
+/*const toLatin = {
   "I" : 1,
   "V": 5,
   "X":10,
@@ -785,7 +785,7 @@ const romanToLatin = (a) => {
   return total
 }
 //console.log(romanToLatin(willBeTranslated))
-console.log(romanToLatin("MCMXC"))
+console.log(romanToLatin("MCMXC"))*/
 //(hatalı çözüm yapmışşşş splitin işlevi neee ve total neden 1 den başlıyor üstteki için)
 
 //**********************ÇÖZÜM2 
@@ -813,3 +813,115 @@ console.log(romanToLatin("MCMXC"))
 //}
 //}
 //console.log(nav("MCMXC"));
+
+
+/*******ARRAYS ÖRNEKLERİ************************* */
+/**************ÖRNEK1 */
+
+/*const dizi = [-5, 15, 22, -4, 45, 78];
+
+const topla = (n) => {
+  let negatifler = 0;
+  let pozitifler = 0;
+  for (let i = 0; i < n.length; i++) {
+    if (n[i] < 0) {
+      negatifler += n[i];
+    } else {
+      pozitifler += n[i];
+    }
+  }
+  console.log(`Dizideki Pozitif Sayıların Toplamı: ${pozitifler}`);
+  console.log(`Dizideki Pozitif Sayıların Toplamı: ${negatifler}`);
+};
+topla(dizi);  */
+
+/**************************ÖRNEK2 */
+
+/*const dizi = [-5, 15, 22, -4, 45, 78];
+const negatifler = [];
+const pozitifler = [];
+const dizilereAyır = (n) => {
+  for (let i = 0; i < n.length; i++) {
+    if (n[i] < 0) {
+      negatifler.push(n[i]);
+    } else {
+      pozitifler.push(n[i]);
+    }
+  }
+};
+dizilereAyır(dizi);
+console.log(negatifler);
+console.log(pozitifler);*/
+
+
+/*******************ÖRNEK3 */
+
+/*const adlar = ["Ahmet", "Can", "Mustafa", "Ayşe", "Elif"];
+const soyAdlar = ["Öztürk", "Yılmaz", "Arı", "Çalı", "Yazı"];
+
+let adSoyad = [];
+for (let i in adlar){
+    adSoyad[i] = adlar[i]+" "+soyAdlar[i];
+}
+console.log(`Ad Soyad birleşimi : `,adSoyad);
+
+
+const birlestir = (arr1, arr2) => {
+    let adSoyad = [];
+    for (let i in arr1) {
+      adSoyad[i] = arr1[i] + arr2[i];
+    }
+console.log(`Ad Soyad birleşim fonksiyon ile : `, adSoyad);
+}
+
+birlestir(adlar, soyAdlar);*/
+
+
+/***********************ÖRNEK4*** */
+
+//*-------------------------------------------------------
+//* SORU: Ogrenciler dizisinde ogrenci isimleri saklanmaktadir.
+//* ogrencileri aramamizi saglayacak ve aranilan ogrenciden
+//* ne kadar sayida bulunuldugunu  ana programa döndürecek bir
+//* fonksiyonu yaziniz. Eger aranilan isimde bir ogrenci yok ise
+//* fonksiyon "ogrenci bulunamadi" dondurulmelidir.
+//*--------------------------------------------------------
+
+const students = [
+  "ahmet",
+  "mehmet",
+  "ismet",
+  "ahmet",
+  "can",
+  "mehmet",
+  "cem",
+];
+let counter = 0;
+const diziİçinde = (arr, name) =>{
+for (let i in arr){
+  if(name == arr[i])
+    counter++
+}
+  if(counter >=1){
+    return `liste ${name} içeriyor`
+  }else {
+    return `listede ${name} bulunmuyor` 
+  }
+}
+ const studentName = prompt("enter name").toLowerCase();
+ console.log(diziİçinde(students, studentName))
+
+
+/*return counter===0 ? `Bulunamadı` : `${counter} times we have ${search} in students`;*/
+
+/*********  farklı çözümmmmmm  ***********/ 
+/*const howMany = (name,arr) => {
+  if (arr.includes(name)){
+      const quantity = arr.filter(a => a == name).length;
+      return `${name} found ${quantity} times.`;
+  }else{
+      return `${name} found 0 times.`;
+  }
+}
+
+console.log(howMany("ahmet",students))  */
