@@ -1095,13 +1095,60 @@ console.log(numBölünen())*/
 //? Example:
 //? str = "Clarusway"         char = "a"       ===> result = 2 as "a" occurs 2 times in Clarusway
 
+/*const kaçTane = (strg, krk) => {
+ let counter = 0
+ for (let i = 0; i<=strg.length-1; i++){
+  if (strg[i] == krk){
+    counter += 1
+  }
+  } return `"${krk}" girile string içinde ${counter} tane var.`
+}
+console.log(kaçTane("clarusway", "a"))*/
+
 //! Q-4
 //? Write a JS code to display Perfect Numbers from 1 to 1000.
 //? A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
 //? For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
 
+let counter = 0
+const perfectNums = (n) => {
+  for( let i=1; i<n; i++){
+      if (n%i==0 ){
+        counter+= i
+      } 
+    }
+  if (counter === n) {
+           return `entered is perfect number`
+  }else {
+          return `entered is not perfect number`
+  }     
+  
+}
+console.log(perfectNums(496));
 
-//! Q-5
+
+
+/************farklı */
+ const perfectNums = () => {
+     let arr = []
+
+     for (let i = 1; i <= 1000; i++){
+         sum = 0;
+         for (let k = 1; k < i; k++){
+             if (!(i % k)) {
+                 sum += k;
+             }
+         }
+         if (sum === i){
+             arr.push(i)
+        }
+     }
+     return arr
+ }
+ console.log(perfectNums());*/
+
+
+ //! Q-5
 //? Develop a guessing game. Randomly generate a number between 0-100. Ask the user to guess that number.
 //? The user should have 5 chance to guess the number.
 //? If the number entered by the user:
@@ -1116,29 +1163,7 @@ console.log(numBölünen())*/
 
 
 
-//! Q-3
-//? You are given a string and character. Write a function to check the string and find how many
-//? times this character occurs in this string.
-//? Example:
-//? str = "Clarusway"         char = "a"       ===> result = 2 as "a" occurs 2 times in Clarusway
 
-// const times = (str, char) => {
-//     let count = 0
-
-//     for (let i =0; i < str.length; i++){
-//         // str[i] === char && count++
-//         if (str[i] === char){
-//             count++
-//         }
-//     }
-//     return `${char} occurs ${count} times in ${str}`
-// }
-
-// const times = (str, char) => {
-//     return str.split(char).length - 1
-// }
-
-// console.log(times('Clarusway', 'a'));
 
 //! Q-4
 //? Write a JS code to display Perfect Numbers from 1 to 1000.
@@ -1167,4 +1192,4 @@ console.log(numBölünen())*/
 // }
 
 
-// console.log(perfectNums());
+// console.log(perfectNums());*/
