@@ -1019,9 +1019,36 @@ console.log(factl(4));*/
 //! Q-5
 //? Write a code to find numbers that are divisible by 3 and 5, between 100 and 1000.
 
+/*let tamBölen = []
+const numBölünen = () => {
+  for(let i= 101; i < 1000; i++){
+    if(i %5 === 0 && i%3 === 0){
+    tamBölen.push(i)
+  } else {
+
+  }
+  } return tamBölen
+}    
+console.log(numBölünen())*/
 
 //! Q-6
 //? Write a code that prints a multiplication table of numbers 1 to 10.
+
+
+ /*const multiplication = () => {
+     let arr = []
+    
+     for (let i = 1; i <= 10; i++){
+         arr.push(`multiplication table of ${i}`)
+         for (let k = 0; k <= 10; k++){
+             arr.push(`${i} * ${k} = ${i*k}`)
+         }
+     }
+
+     return arr
+ }
+
+ console.log(multiplication())*/
 
 
 //! Q-7
@@ -1029,6 +1056,20 @@ console.log(factl(4));*/
  
 //? 5 Whiteball numbers are chosen from 01 to 69 and 1 Powerball number is chosen from 1 to 26.
 
+/* const powerball = () => {
+     let powerball = Math.floor(Math.random() * 26) + 1
+     let whiteball = []
+
+     for (let i = 1; i <= 5; i++){
+         let random = Math.floor(Math.random() * 69) + 1
+         whiteball.push(random)
+         //console.log(whiteball)
+     }
+
+     return `${whiteball.join(',')},${powerball}`
+ }
+
+ console.log(powerball())*/
 
 
 //2. Bölüm Functions
@@ -1036,8 +1077,17 @@ console.log(factl(4));*/
 //! Q-1
 //? Write a Function that takes 2 parameters (amount and rate) to convert currency.
 
+// const currency = (amount, rate=1.5) => amount * rate
+// console.log(currency(1000));
+
 //! Q-2
 //? Write a JavaScript function that accepts an argument and returns the type.
+
+// const type = (x) => {
+//     return typeof x
+// }
+
+// console.log(type(true))
 
 //! Q-3
 //? You are given a string and character. Write a function to check the string and find how many
@@ -1061,3 +1111,60 @@ console.log(factl(4));*/
 //? If user can't find the number in 5 guess then game is lost and display the random number.
 //? Hint: you can use this code to generate random number 0-100
 //? const winingNumber = Math.round(Math.random() * 100);*/
+
+
+
+
+
+//! Q-3
+//? You are given a string and character. Write a function to check the string and find how many
+//? times this character occurs in this string.
+//? Example:
+//? str = "Clarusway"         char = "a"       ===> result = 2 as "a" occurs 2 times in Clarusway
+
+// const times = (str, char) => {
+//     let count = 0
+
+//     for (let i =0; i < str.length; i++){
+//         // str[i] === char && count++
+//         if (str[i] === char){
+//             count++
+//         }
+//     }
+//     return `${char} occurs ${count} times in ${str}`
+// }
+
+// const times = (str, char) => {
+//     return str.split(char).length - 1
+// }
+
+// console.log(times('Clarusway', 'a'));
+
+//! Q-4
+//? Write a JS code to display Perfect Numbers from 1 to 1000.
+//? A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
+//? For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
+
+// const perfectNums = () => {
+//     let arr = []
+
+//     for (let i = 1; i <= 1000; i++){
+//         sum = 0;
+
+//         for (let k = 1; k < i; k++){
+//             if (!(i % k)) {
+//                 sum += k;
+//             }
+//         }
+
+//         if (sum === i){
+//             arr.push(i)
+//         }
+
+//     }
+
+//     return arr
+// }
+
+
+// console.log(perfectNums());
