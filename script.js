@@ -1110,7 +1110,7 @@ console.log(kaçTane("clarusway", "a"))*/
 //? A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
 //? For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
 
-let counter = 0
+/*let counter = 0
 const perfectNums = (n) => {
   for( let i=1; i<n; i++){
       if (n%i==0 ){
@@ -1129,7 +1129,7 @@ console.log(perfectNums(496));
 
 
 /************farklı */
- const perfectNums = () => {
+ /*const perfectNums = () => {
      let arr = []
 
      for (let i = 1; i <= 1000; i++){
@@ -1145,7 +1145,7 @@ console.log(perfectNums(496));
      }
      return arr
  }
- console.log(perfectNums());*/
+ console.log(perfectNums()); */
 
 
  //! Q-5
@@ -1162,34 +1162,23 @@ console.log(perfectNums(496));
 
 
 
+//! ODEV1: String' deki kelimelerin sayisini donduren bir fonksiyon yaziniz.
+const string = "uzun ince bir yoldayim gidiyorum gündüz gece.";
+const kelimeSayisi = function (string) {
+  const uzunluk = string.split(" ");
+  return uzunluk.length;
+};
+console.log(kelimeSayisi(string));
 
 
-
-//! Q-4
-//? Write a JS code to display Perfect Numbers from 1 to 1000.
-//? A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
-//? For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
-
-// const perfectNums = () => {
-//     let arr = []
-
-//     for (let i = 1; i <= 1000; i++){
-//         sum = 0;
-
-//         for (let k = 1; k < i; k++){
-//             if (!(i % k)) {
-//                 sum += k;
-//             }
-//         }
-
-//         if (sum === i){
-//             arr.push(i)
-//         }
-
-//     }
-
-//     return arr
-// }
-
-
-// console.log(perfectNums());*/
+//! //////////  ÖDEV :Youtube adres kısaltma   ///////
+let yazi = "https://www.youtube.com/watch?v=b7vfp5G4brE";
+let kisaltma = function (yazi) {
+  const bolme1 = yazi.slice("0", "8");
+  let bolme2 = yazi.slice("8", "24");
+  bolme2 = bolme2.replaceAll("www.youtube.com", "youtu.be");
+  const bolme3 = yazi.slice("32", yazi.length);
+  const kisaHali = bolme1 + bolme2 + bolme3;
+  return kisaHali;
+};
+console.log(kisaltma(yazi));
