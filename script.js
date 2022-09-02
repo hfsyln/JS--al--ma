@@ -1160,7 +1160,7 @@ console.log(perfectNums(496));
 //? const winingNumber = Math.round(Math.random() * 100);*/
 
 
-
+/*
 
 //! ODEV1: String' deki kelimelerin sayisini donduren bir fonksiyon yaziniz.
 const string = "uzun ince bir yoldayim gidiyorum gündüz gece.";
@@ -1181,4 +1181,81 @@ let kisaltma = function (yazi) {
   const kisaHali = bolme1 + bolme2 + bolme3;
   return kisaHali;
 };
-console.log(kisaltma(yazi));
+console.log(kisaltma(yazi));*/
+
+
+/!********************challege***********/
+/**********************************************soru1****/
+
+//if first dice is 1 and second dice is 6, output should be 'one - six'
+//For example :
+//call this function with dices(10) Yo should display all 10 result.
+//And display the result in the following format on the console: for Example:
+//1st dice: 2 2nd dice: 3 output => 'two' - 'three'
+//1st dice: 6 2nd dice: 4 output => 'four' - 'six' // Always dsiplay the low dice first.
+
+/*const roll = (number) => {
+  for (let i = 1; i <=number; i++) {
+    let rol1 = Math.ceil(Math.random() * 6);
+    let rol2 = Math.ceil(Math.random() * 6);
+    const arr = ["one", "two", "three", "four", "five", "six"];
+    if (rol1 > rol2) {
+      return ` ${i} times => ${arr[rol2-1]} - ${arr[rol1-1]}`
+    }else {
+      return ` ${i} times =>${arr[rol1-1]} - ${arr[rol2-1]} `
+    }
+  }
+}; roll(10)*/
+
+
+/***********************************soru2********************************* */
+/*
+
+const arr = [
+'C1234 - John Doe, London, Full-Stack', 
+'C2345 - Jane Doe, London, Data-Science', 
+'C2346 - Mary Ann, Paris, AWS-Devops', 
+'C2347 - Adam Smith, Texas, AWS-Devops',
+'C2444 - Michael Great, Arizona, Full-Stack', 
+'C2555 - William Cash, Manchester, Data-Science', 
+'C2455 - Patrick Jane, Madrid, Full-Stack'
+];
+
+const student = (a) => {
+  a.map((str) => { 
+    let result = str.split(" ");
+    console.log(result);
+    console.log(`Student Nr: ${result[0]} \n
+    First Name: ${result[2]} \n
+    Last Name: ${result[3].slice(0, -1)} \n
+    Location: ${result[4].replace(",", "")} \n
+    program: ${result[5]} \n
+    ======================`);
+  });
+}; student(arr);*/
+
+/********************************soru3 */
+
+/*Write a function that takes email variable and return true or false and write console invalid or valid.
+Valid characters in the email address will be 'abcdefghijklmnopqrstuvwxyz0123456789_+.@' P.S. :
+Capital letters are allowed.
+An email should not start with '@' symbol and should not contain more than one '@' sign.
+There should be at least two characters after the '.' sign. (like .co or .com) There should be at least one '. after the '@' sign.
+For examples:
+name.last_Name@company.com -> 🆗 Valid name.143@company.co -> 🆗 Valid name.last-Name@company.com -> ❌ Dashes are not allowed name.last_Name@company.c -> ❌ There should be at least two characters after the '.' sign. name.last_Name@company -> ❌ There should be at least one '. after the '@' sign.
+
+
+const emailValidator = (email) => {
+  const regexPatern = /^[A-Za-z0-9\_]+\@[A-Za-z]+\.[A_Za-z]{2,3}$/;
+    if (regexPatern.test(email)) {
+      console.log(`your email is true`);
+    } else {
+      console.log(`Your email is false`);
+    }
+    regexPatern.test(email)
+      ? console.log(`your email is true`)
+      : console.log(`Your email is false`);
+    regexPatern.test(email) && console.log(`your email is true`);
+  !regexPatern.test(email) || console.log(`your email is false`);
+};
+emailValidator("osmanmerhaba@gmail.com");*/
