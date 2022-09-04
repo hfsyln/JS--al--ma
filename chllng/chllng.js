@@ -677,14 +677,24 @@ emailValidator("osmanmerhaba@gmail.com"); */
 
 const ssnControl = (ssn) => {
     ssn = ssn.split("-");
-    console.log(ssn)
+    console.log(ssn);
+    let part1 = ssn[0].split("");
+    let part1l = part1.lenght
+    console.log(part1l)
+    console.log(part1.lenght)
+    let part2 = ssn[1].split("").lenght;
+    let part3 = ssn[2].split("");
+    console.log(ssn[0])
     for (i in ssn){
+        if(part1.lenght) {
+        }
         if (i==0 && +ssn[i]<666 && 900<+ssn[i]<999 ){
             i+=1
             console.log(i);
-            if(i==1 && +ssn[i]<99){
-                i+=1
-                console.log(i);
+            if(i==1 && +ssn[i]<= 99 ){
+                console.log(ssn[1])
+                i++
+                console.log(i)
                 if(i==2 && ssn[i].lenght==4 && ssn[i]<9999){
                   return `doğru`   
                 }else {return `hatalı`};
@@ -692,7 +702,7 @@ const ssnControl = (ssn) => {
         }else {return `hatalı`}     
     };
     
-}; console.log(ssnControl("268-26-3556"))
+}; console.log(ssnControl("268-55-3556"))
 
 /*let checkSgk = (id) => {
     console.log(id)
@@ -721,3 +731,5 @@ const ssnControl = (ssn) => {
     return flag;
   };
   console.log(checkSgk("2868-56-3556"));*/
+
+ 
