@@ -677,17 +677,9 @@ emailValidator("osmanmerhaba@gmail.com"); */
 
 const ssnControl = (ssn) => {
     ssn = ssn.split("-");
-    console.log(ssn);
-    let part1 = ssn[0].split("");
-    let part1l = part1.lenght
-    console.log(part1l)
-    console.log(part1.lenght)
-    let part2 = ssn[1].split("").lenght;
-    let part3 = ssn[2].split("");
+    console.log(ssn)
     console.log(ssn[0])
     for (i in ssn){
-        if(part1.lenght) {
-        }
         if (i==0 && +ssn[i]<666 && 900<+ssn[i]<999 ){
             i+=1
             console.log(i);
