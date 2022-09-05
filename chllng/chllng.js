@@ -659,6 +659,154 @@ emailValidator("osmanmerhaba@gmail.com"); */
 
 
 
+
+
+//! soru5
+ /*The purpose of this coding challenge is to create a function that will take text in kebab case format or with spaces and output it in camel case format.
+ Expected Outcome
+ For Example:
+ Input : JavaScript coding ChAlLenge
+ Output : javaScriptCodingChallenge
+
+ Input : JavaScript-coding-challenge
+ Output : JavaScriptCodingChallenge
+
+ Input : javaScriptCodingChallenge
+ Output : javaScriptCodingChallenge
+
+let camelCase = (id) => {
+  if (id.includes("-")) {
+    id = id.split("-");
+  } else {
+    id = id.split(" ");
+  }
+  for (i in id) {
+    id[i] = id[i][0].toUpperCase() + id[i].slice(1, id[i].length).toLowerCase();
+  }
+  return id.join("");
+};
+
+console.log(camelCase("Javascript-code-woRld-pyTHon"));*/
+
+
+
+//!soru6
+/*// Purpose of the this coding challenge is to write a code that can generate random password for 10 characters
+// as default and expected constraints below.
+
+// Expected Outcome
+// password length must be equal to 10
+// there should be 3 numbers
+// and there should 2 symbols from below:
+//* !@#$%^&*()\_+~|}{[]:;?><,./-=
+// there should be minimum 1 lower and 1 upper case letters,
+
+//? valid samples:
+// Aa123&!xyz
+// Aa@/456stu
+// 123aA(p?rs
+
+//? invalid samples:
+// AB123&!XYZ    no lower case letters
+// ab123&!xyz    no upper case letters
+// Aa@c456stu    only one symbol
+// 12aA(p?rsz    only two numbers
+
+
+const pasword = () => {
+let password = [];
+let specialCharacters = "!@#$%^&*(_+~|}{[]:;?><,./-=";
+let letterUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let letterLower ="abcdefghijklmnopqrstuvwxyz";
+let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+for(let i=0; i<3; i++){
+    password.push(Math.floor(Math.random() * 10));
+};
+for(let i=0; i<2; i++){
+    password.push(specialCharacters[Math.floor(Math.random() *27 )])
+};
+for(let i=0; i<3; i++){
+    password.push(letters[Math.floor(Math.random() * 52)]);
+};
+password.push(letterUpper[Math.floor(Math.random() * 26)]);
+password.push(letterLower[Math.floor(Math.random() * 26)]);
+
+console.log(password)
+return password
+};  
+console.log(pasword().join("")); */
+
+
+
+
+
+//! soru7
+// The purpose of this coding challenge is to create a function that will take two parameters. The first parameter
+// should be an array and the second parameter should be a positive integer. The function will sort the array and
+// return the smallest nth (n = second parameter) element. Return an error message if the second parameter is
+// greater than the number of elements of the array.
+
+// Expected Outcome
+// For Example:
+// Input : ([10,50,61,17,82,95,9,11,12,13],3)
+// Output : 11 (3rd smallest element)
+
+// Input : ([10,50],4)
+// Output : Out of range
+
+
+
+
+
+
+
+
+
+/*
+const sortArr = function (arr, n) {
+  if (n > arr.length || n <= 0) {
+    return "Out of range";
+  }
+  arr.sort((a, b) => {
+    return a - b;
+  });
+  console.log(arr);
+  // array.sort() mutater func.
+  return arr[n - 1];
+};
+​
+const sample = [2, 35, 14, 3, 12, 15];
+​
+console.log(sortArr(sample, 2));*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! soru 8  ????????????????????????????????????????????????????????????????
   //? JS-CC-028 : SSN (Social Security Number) Validator
 //? The purpose of this coding challenge is to create a function that will check the given SSN (Social Security Number) is valid or not valid.
 //? Problem Statement
@@ -675,53 +823,41 @@ emailValidator("osmanmerhaba@gmail.com"); */
 // 510-72-0765
 // 504-58-0987
 
-const ssnControl = (ssn) => {
+const validator=(arr)=> {
+  let newarray=arr.split("")
+  let newarray2=arr.split("-")
+  console.log(newarray)
+  console.log(newarray2)
+
+ 
+     if(isNaN( +newarray2[0]) || isNaN( +newarray2[1]) || isNaN(+newarray2[2])){
+      console.log("this is invalid")
+     }
+  
+      else if(newarray.length !=11){
+          console.log("this enter is an  invalid")
+      }
+      else if (newarray[3]!=="-" && newarray[6]!=="-"){
+          console.log("this enter is an  invalid")
+      }
+      
+      else if (newarray2[0]==="000" || newarray2[0]==="666" || +newarray2[0]>900 ){
+          console.log("this enter is an  invalid")
+      }
+      else {                                                                                                       console.log("your enter is valid, congrats")
+      }  
+}
+
+let array="268-55-3466"
+validator(array)
+
+
+
+/*const ssnControl = (ssn) => {
     ssn = ssn.split("-");
     console.log(ssn)
     console.log(ssn[0])
-    for (i in ssn){
-        if (i==0 && +ssn[i]<666 && 900<+ssn[i]<999 ){
-            i+=1
-            console.log(i);
-            if(i==1 && +ssn[i]<= 99 ){
-                console.log(ssn[1])
-                i++
-                console.log(i)
-                if(i==2 && ssn[i].lenght==4 && ssn[i]<9999){
-                  return `doğru`   
-                }else {return `hatalı`};
-            }else {return `hatalı`};
-        }else {return `hatalı`}     
-    };
-    
-}; console.log(ssnControl("268-55-3556"))
-
-/*let checkSgk = (id) => {
-    console.log(id)
-    id = "" + id;
-    console.log(id);
-    id = id.split("-");
-    console.log(id);
-    flag = true;
-    for (i in id) {
-      if (i == 0) {
-        if (Number(id[i]) > 667 && Number(id[i]) < 899) {
-          flag = "false1";
-        }
-      } else if (i == 1) {
-        if (Number(id[i] > 99)) {
-          flag = "false4";
-        }
-      } else if (i == 2) {
-        if (Number(id[i] > 9999)) {
-          flag = "false2";
-        }
-      } else {
-        flag = "false3";
-      }
-    }
-    return flag;
-  };
-  console.log(checkSgk("2868-56-3556"));*/
-
- 
+    console.log(ssn[0].lenght)
+  
+const arr = ["1234", "2435", "yuyu"]
+let a = arr.split("-")*/
