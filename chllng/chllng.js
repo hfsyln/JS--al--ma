@@ -823,7 +823,7 @@ console.log(sortArr(sample, 2));*/
 // 510-72-0765
 // 504-58-0987
 
-const validator=(arr)=> {
+/*const validator=(arr)=> {
   let newarray=arr.split("")
   let newarray2=arr.split("-")
   console.log(newarray)
@@ -849,7 +849,7 @@ const validator=(arr)=> {
 }
 
 let array="268-55-3466"
-validator(array)
+validator(array)  */
 
 
 
@@ -861,3 +861,185 @@ validator(array)
   
 const arr = ["1234", "2435", "yuyu"]
 let a = arr.split("-")*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1) - verilen sayının basamak değerlerini birbiri ile çarpacağız. kaç defada tek haneli basamağa ulaşıyor?
+39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
+999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
+4 --> 0 (because 4 is already a one-digit number)
+
+
+2) - verilen bir sayının binary sistemdeki karşılığı olan sayının içerisinde kaç adet 1 rakamı var.
+
+input                   output
+15     =>   (1111)  =>    4 
+14     =>   (1110)  =>    3
+
+
+3) fonsiyona iki adet parametre gelecek. ikinci parametre ilk gelen parametrinin rakamlarının üstü olacak ve her rakamda artacak.
+bu rakamların toplamı ilk gelen sayının tam katı olursa kat sayısını tam katı olmazsa -1 i return edecek.
+
+
+695 --> 6² + 9³ + 5⁴= 1390 = 695 * 2
+
+46288 --> 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
+
+digPow(89, 1) should return 1 since 8¹ + 9² = 89 = 89 * 1  => return 1
+digPow(92, 1) should return -1 since there is no k such as 9¹ + 2² equals 92 * k
+digPow(695, 2) should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2  => return 2
+digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51 => return 51
+
+
+4) verilen dizide hangi elemanın kaç defa geçtiğini çıktı veren fonksiyon?
+
+
+soru çözümleri
+6 replies
+
+
+3631 İhsan
+  1 day ago
+soru 1
+let tekhane = (sayi) => {
+  sayi = "" + sayi;
+  sayi = sayi.split("");
+  let toplam = 1;
+  let counter = 0;
+  while (sayi.length > 1) {
+    for (let i = 0; i < sayi.length; i++) {
+      toplam *= sayi[i];
+    }
+    sayi = ("" + toplam).split("");
+    toplam = 1;
+    counter++;
+  }
+  return counter;
+};
+console.log(tekhane(999));
+
+
+
+
+
+F3673-Cooper
+:house_with_garden:  1 day ago
+https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/javascript
+Persistent Bugger.--> soru adı
+CodewarsCodewars
+Training on Persistent Bugger. | Codewars
+Codewars is where developers achieve code mastery through challenge. Train on kata in the dojo and reach your highest potential.
+
+
+3631 İhsan
+  1 day ago
+soru 2
+let binary = (sayi) => {
+  sayi = sayi.toString(2);
+  console.log(sayi);
+  sayi = ("" + sayi).split("0");
+  let counter = 0;
+  for (let item of sayi) {
+    console.log("item : ", item);
+    if (item == "1") {
+      counter++;
+    }
+  }
+  return counter;
+};
+console.log(binary(20));
+// yöntem 2
+countBits = (n) => n.toString(2).split("0").join("").length;
+
+
+F3673-Cooper
+:house_with_garden:  1 day ago
+soru -1 map ile çözümü,
+
+function persistence(num) {
+   var times = 0;
+   
+   num = num.toString();
+   
+   while (num.length > 1) {
+     times++;
+     num = num.split('').map(Number).reduce((a, b) => a * b).toString();
+   }
+   
+   return times;
+}
+:+1::+1::skin-tone-2:
+7
+
+
+
+3631 İhsan
+  1 day ago
+// yöntem 3
+// let bul2 = (array) => {
+//   array = array.sort((a, b) => a - b);
+//   console.log(array);
+//   if (array[0] != 1) {
+//     return 1;
+//   } else {
+//     for (let i in array) {
+//       if (array[Number(i) + 1] - array[Number(i)] != 1) {
+//         return Number(array[i] + 1);
+//       }
+//     }
+//   }
+// };
+// console.log(bul2([10, 2, 3, 5, 6, 8, 7, 9, 4]));
+
+
+3631 İhsan
+  1 day ago
+soru 4
+let count = (dizi) => {
+  let ilk = [];
+  let son = [];
+  dizi.forEach((element) => {
+    let count = 0;
+    let eleman = "";
+    for (let item of dizi) {
+      if (element === item) {
+        count++;
+        eleman = item;
+      }
+    }
+    ilk = [eleman, count];
+    if (!son.length) {
+      son = son.concat(ilk);
+    } else {
+      let counter = 0;
+      for (let i = 0; i < son.length; i += 2) {
+        if (son[i] !== eleman) {
+          counter++;
+        }
+      }
+      if (counter * 2 == son.length) {
+        son = son.concat(ilk);
+      }
+    }
+  });
+  return son;
+};
+let dizi1 = ["ali", "veli", "ali", "veli", "veli", "2", 2, 2, 2];
+console.log(count(dizi1));
+
+
+
+
