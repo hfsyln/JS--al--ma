@@ -863,6 +863,50 @@ const arr = ["1234", "2435", "yuyu"]
 let a = arr.split("-")*/
 
 
+//!05.09.2022//
+
+//?soru1//  
+//verilen sayının basamak değerlerini birbiri ile çarpacağız. kaç defada tek haneli basamağa ulaşıyor?
+//39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
+
+
+const tekhane = (sayı) => {
+  let çarpım = 1;
+  sayı = "" + sayı;
+  sayı = sayı.split ("");
+  console.log(sayı)
+  counter = 1
+  
+  while(sayı.length > 1)
+    for ( let a of sayı ) {
+        çarpım = çarpım * +a
+        console.log(çarpım)
+    }
+    sayı = çarpım
+    if(sayı.length > 1){
+      counter +=1
+      console.log(counter)
+    }return counter
+    
+}; console.log(tekhane(999));
+
+
+/*let tekhane = (sayi) => {
+  sayi = "" + sayi;
+  sayi = sayi.split("");
+  let çarpım = 1;
+  let counter = 0;
+  while (sayi.length > 1) {
+    for (let i = 0; i < sayi.length; i++) {
+      çarpım *= sayi[i];
+    }
+    sayi = ("" + çarpım).split("");
+    çarpım = 1;
+    counter++;
+  }
+  return counter;
+};
+console.log(tekhane(999));
 
 
 
@@ -870,18 +914,7 @@ let a = arr.split("-")*/
 
 
 
-
-
-
-
-
-
-
-1) - verilen sayının basamak değerlerini birbiri ile çarpacağız. kaç defada tek haneli basamağa ulaşıyor?
-39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
-999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
-4 --> 0 (because 4 is already a one-digit number)
-
+/*
 
 2) - verilen bir sayının binary sistemdeki karşılığı olan sayının içerisinde kaç adet 1 rakamı var.
 
@@ -914,22 +947,7 @@ soru çözümleri
 3631 İhsan
   1 day ago
 soru 1
-let tekhane = (sayi) => {
-  sayi = "" + sayi;
-  sayi = sayi.split("");
-  let toplam = 1;
-  let counter = 0;
-  while (sayi.length > 1) {
-    for (let i = 0; i < sayi.length; i++) {
-      toplam *= sayi[i];
-    }
-    sayi = ("" + toplam).split("");
-    toplam = 1;
-    counter++;
-  }
-  return counter;
-};
-console.log(tekhane(999));
+
 
 
 
@@ -1005,6 +1023,14 @@ function persistence(num) {
 // console.log(bul2([10, 2, 3, 5, 6, 8, 7, 9, 4]));
 
 
+
+
+
+
+05.09.2022
+
+
+
 3631 İhsan
   1 day ago
 soru 4
@@ -1043,3 +1069,52 @@ console.log(count(dizi1));
 
 
 
+07.09.2022
+
+//! Q-1
+/*
+In this kata you get the start number and the end number of a region and should return the count of all numbers except numbers with a 5 in it. The start and the end number are both inclusive!
+Examples:
+1,9 -> 1,2,3,4,6,7,8,9 -> Result 8
+4,17 -> 4,6,7,8,9,10,11,12,13,14,16,17 -> Result 12
+The result may contain fives. ;-)
+The start number will always be smaller than the end number. Both numbers can be also negative!
+*/
+
+//! Q-2
+/*
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+Examples:
+Input: 42145 Output: 54421
+Input: 145263 Output: 654321
+Input: 123456789 Output: 987654321
+*/
+
+//! Q-3
+/*
+Given a sequence of integers, return the sum of all the integers that have an even index (odd index in COBOL), multiplied by the integer at the last index.
+Indices in sequence start from 0.
+If the sequence is empty, you should return 0.
+*/
+
+//! Q-4
+/*
+Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+For example:
+uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+uniqueInOrder([1,2,2,3,3,3])       == [1,2,3]
+*/
+
+//! Q-5
+/*
+Your task is to write a function that takes two or more objects and returns a new object which combines all the input objects.
+All input object properties will have only numeric values. Objects are combined together so that the values of matching keys are added together.
+An example:
+const objA = { a: 10, b: 20, c: 30 }
+const objB = { a: 3, c: 6, d: 3 }
+const objC = { a: 5, d: 11, e: 8 }
+const objD = { c: 3 }
+
+combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
+*/
