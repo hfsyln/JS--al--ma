@@ -937,6 +937,9 @@ console.log(tekhane(999));*/
   
 }; console.log(binary(14))*/
 
+//! yöntem 2
+//countBits = (n) => n.toString(2).split("0").join("").length;
+
 
 //?soru3//
 //fonsiyona iki adet parametre gelecek. ikinci parametre ilk gelen parametrinin rakamlarının üstü olacak ve her rakamda artacak.
@@ -947,38 +950,49 @@ console.log(tekhane(999));*/
 //digPow(695, 2) should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2  => return 2
 //digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51 => return 51
 
-
+/*
 const digPow = (sayı, üs)=>{
   üs = "" + üs
-  console.log(sayı)
+  //console.log(üs)
   sayı = "" + sayı
-  console.log(sayı)
+  //console.log(sayı)
   sayı = sayı.split("");
-  console.log(sayı)
+  //console.log(sayı)
   let toplam = 0
-  for(let x of sayı){
-    for(let i = üs; i < i+sayı.length-1; i++)
-     toplam += x**i
-  }return toplam
   
-}; console.log(digPow(126, 2))
+  for(let x of sayı){
+    
+    toplam += x**üs
+    //console.log(toplam)
+    üs = +üs + 1
+  }
+   sayı = sayı.join("")
+   //console.log(sayı)
+
+  if(toplam % sayı == 0){
+    console.log(toplam/sayı);
+  } else{
+    console.log(-1)
+  }
+    //return toplam 
+}; digPow(695, 2) */
+
+
+
+//?soru4
+//verilen dizide hangi elemanın kaç defa geçtiğini çıktı veren fonksiyon?
+
+
+
+
+
+
+
+
 
 
 
 /*
-4) verilen dizide hangi elemanın kaç defa geçtiğini çıktı veren fonksiyon?
-
-
-
-
-
-
-
-
-
-
-
-
 F3673-Cooper
 :house_with_garden:  1 day ago
 https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/javascript
@@ -989,8 +1003,7 @@ Codewars is where developers achieve code mastery through challenge. Train on ka
 
 
 
-// yöntem 2
-countBits = (n) => n.toString(2).split("0").join("").length;
+
 
 
 F3673-Cooper
