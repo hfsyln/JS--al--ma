@@ -869,28 +869,31 @@ let a = arr.split("-")*/
 //verilen sayının basamak değerlerini birbiri ile çarpacağız. kaç defada tek haneli basamağa ulaşıyor?
 //39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
 
-
+/*
 const tekhane = (sayı) => {
   let çarpım = 1;
   sayı = "" + sayı;
   sayı = sayı.split ("");
-  console.log(sayı)
+  //console.log(sayı)
   counter = 1
   
-  while(sayı.length > 1)
+  while(sayı.length > 1){
     for ( let a of sayı ) {
         çarpım = çarpım * +a
-        console.log(çarpım)
+        //console.log(çarpım)
     }
-    sayı = çarpım
+    sayı =("" + çarpım).split("")
+    console.log(sayı)
     if(sayı.length > 1){
+      çarpım = 1
       counter +=1
-      console.log(counter)
-    }return counter
+      //console.log(counter)
+    }
+  }return counter
     
-}; console.log(tekhane(999));
+}; console.log(tekhane(999));*/
 
-
+//!ikinci yol
 /*let tekhane = (sayi) => {
   sayi = "" + sayi;
   sayi = sayi.split("");
@@ -906,23 +909,36 @@ const tekhane = (sayı) => {
   }
   return counter;
 };
-console.log(tekhane(999));
+console.log(tekhane(999));*/
 
 
 
 
+//?soru2//
+//verilen bir sayının binary sistemdeki karşılığı olan sayının içerisinde kaç adet 1 rakamı var.
+//input                   output
+//15     =>   (1111)  =>    4 
+//14     =>   (1110)  =>    3
 
+
+
+const binary = (sayı)=> {
+  counter = 0;
+  sayı = sayı.toString(2);
+  console.log(sayı);
+  sayı = sayı.split("");
+  console.log(sayı);
+  for (let a of sayı){
+    if (a == 1){
+      counter += 1
+    }
+  }return counter
+   
+  
+}; console.log(binary(14))
 
 
 /*
-
-2) - verilen bir sayının binary sistemdeki karşılığı olan sayının içerisinde kaç adet 1 rakamı var.
-
-input                   output
-15     =>   (1111)  =>    4 
-14     =>   (1110)  =>    3
-
-
 3) fonsiyona iki adet parametre gelecek. ikinci parametre ilk gelen parametrinin rakamlarının üstü olacak ve her rakamda artacak.
 bu rakamların toplamı ilk gelen sayının tam katı olursa kat sayısını tam katı olmazsa -1 i return edecek.
 
