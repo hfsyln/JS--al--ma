@@ -922,7 +922,7 @@ console.log(tekhane(999));*/
 
 
 
-const binary = (sayı)=> {
+/*const binary = (sayı)=> {
   counter = 0;
   sayı = sayı.toString(2);
   console.log(sayı);
@@ -935,34 +935,44 @@ const binary = (sayı)=> {
   }return counter
    
   
-}; console.log(binary(14))
+}; console.log(binary(14))*/
+
+
+//?soru3//
+//fonsiyona iki adet parametre gelecek. ikinci parametre ilk gelen parametrinin rakamlarının üstü olacak ve her rakamda artacak.
+//bu rakamların toplamı ilk gelen sayının tam katı olursa kat sayısını tam katı olmazsa -1 i return edecek.
+
+
+//digPow(89, 1) should return 1 since 8¹ + 9² = 89 = 89 * 1  => return 1
+//digPow(695, 2) should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2  => return 2
+//digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51 => return 51
+
+
+const digPow = (sayı, üs)=>{
+  üs = "" + üs
+  console.log(sayı)
+  sayı = "" + sayı
+  console.log(sayı)
+  sayı = sayı.split("");
+  console.log(sayı)
+  let toplam = 0
+  for(let x of sayı){
+    for(let i = üs; i < i+sayı.length-1; i++)
+     toplam += x**i
+  }return toplam
+  
+}; console.log(digPow(126, 2))
+
 
 
 /*
-3) fonsiyona iki adet parametre gelecek. ikinci parametre ilk gelen parametrinin rakamlarının üstü olacak ve her rakamda artacak.
-bu rakamların toplamı ilk gelen sayının tam katı olursa kat sayısını tam katı olmazsa -1 i return edecek.
-
-
-695 --> 6² + 9³ + 5⁴= 1390 = 695 * 2
-
-46288 --> 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
-
-digPow(89, 1) should return 1 since 8¹ + 9² = 89 = 89 * 1  => return 1
-digPow(92, 1) should return -1 since there is no k such as 9¹ + 2² equals 92 * k
-digPow(695, 2) should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2  => return 2
-digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51 => return 51
-
-
 4) verilen dizide hangi elemanın kaç defa geçtiğini çıktı veren fonksiyon?
 
 
-soru çözümleri
-6 replies
 
 
-3631 İhsan
-  1 day ago
-soru 1
+
+
 
 
 
@@ -978,23 +988,7 @@ Training on Persistent Bugger. | Codewars
 Codewars is where developers achieve code mastery through challenge. Train on kata in the dojo and reach your highest potential.
 
 
-3631 İhsan
-  1 day ago
-soru 2
-let binary = (sayi) => {
-  sayi = sayi.toString(2);
-  console.log(sayi);
-  sayi = ("" + sayi).split("0");
-  let counter = 0;
-  for (let item of sayi) {
-    console.log("item : ", item);
-    if (item == "1") {
-      counter++;
-    }
-  }
-  return counter;
-};
-console.log(binary(20));
+
 // yöntem 2
 countBits = (n) => n.toString(2).split("0").join("").length;
 
