@@ -23,7 +23,7 @@ renderSavedTodos();
 addBtn.addEventListener("click", () => {
   if (todoInput.value.trim() === "") {
     alert("PLease enter new todo");
-  } else {
+  } else { //olunca obje oluştur ve girileni obje yap (ne zaman yeni obje oluştu ona ıd ata textini texte ata diğerlerini yap)
     const newTodo = {
       id: new Date().getTime(),
       completed: false,
@@ -31,7 +31,7 @@ addBtn.addEventListener("click", () => {
     };
 
     //! yeni bir li elementi olusturup bunu DOM'a bas
-    createListElement(newTodo);
+    createListElement(newTodo); //newtodo bilgisini fonksiyona göndermek için
 
     //?Yeni olusturulan todo'yu diziye sakla
     todos.push(newTodo);
@@ -42,8 +42,9 @@ addBtn.addEventListener("click", () => {
   }
 });
 
+//element oluşturmayı fonksiyon ile yap
 function createListElement(newTodo) {
-  const { id, completed, text } = newTodo; //!destr.
+  const { id, completed, text } = newTodo; //!destr. ayıkla ve kolay kullanım yap
 
   //? yeni bir li elementi olustur ve bu elemente obje icerisindeki
   //? id degerini ve completed class'ini ata
