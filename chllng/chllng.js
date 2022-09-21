@@ -982,8 +982,41 @@ const digPow = (sayı, üs)=>{
 //?soru4
 //verilen dizide hangi elemanın kaç defa geçtiğini çıktı veren fonksiyon?
 
-
-
+/*
+3631 İhsan
+  1 day ago
+soru 4
+let count = (dizi) => {
+  let ilk = [];
+  let son = [];
+  dizi.forEach((element) => {
+    let count = 0;
+    let eleman = "";
+    for (let item of dizi) {
+      if (element === item) {
+        count++;
+        eleman = item;
+      }
+    }
+    ilk = [eleman, count];
+    if (!son.length) {
+      son = son.concat(ilk);
+    } else {
+      let counter = 0;
+      for (let i = 0; i < son.length; i += 2) {
+        if (son[i] !== eleman) {
+          counter++;
+        }
+      }
+      if (counter * 2 == son.length) {
+        son = son.concat(ilk);
+      }
+    }
+  });
+  return son;
+};
+let dizi1 = ["ali", "veli", "ali", "veli", "veli", "2", 2, 2, 2];
+console.log(count(dizi1));
 
 
 
@@ -1000,10 +1033,6 @@ Persistent Bugger.--> soru adı
 CodewarsCodewars
 Training on Persistent Bugger. | Codewars
 Codewars is where developers achieve code mastery through challenge. Train on kata in the dojo and reach your highest potential.
-
-
-
-
 
 
 F3673-Cooper
@@ -1050,44 +1079,11 @@ function persistence(num) {
 
 
 
-05.09.2022
 
 
 
-3631 İhsan
-  1 day ago
-soru 4
-let count = (dizi) => {
-  let ilk = [];
-  let son = [];
-  dizi.forEach((element) => {
-    let count = 0;
-    let eleman = "";
-    for (let item of dizi) {
-      if (element === item) {
-        count++;
-        eleman = item;
-      }
-    }
-    ilk = [eleman, count];
-    if (!son.length) {
-      son = son.concat(ilk);
-    } else {
-      let counter = 0;
-      for (let i = 0; i < son.length; i += 2) {
-        if (son[i] !== eleman) {
-          counter++;
-        }
-      }
-      if (counter * 2 == son.length) {
-        son = son.concat(ilk);
-      }
-    }
-  });
-  return son;
-};
-let dizi1 = ["ali", "veli", "ali", "veli", "veli", "2", 2, 2, 2];
-console.log(count(dizi1));
+
+
 
 
 
