@@ -10,6 +10,8 @@ let todos = JSON.parse(localStorage.getItem("TODOS")) || []    //todos içinde b
 
 console.log(todos);
 
+
+
 addBtn.addEventListener("click", () => {
     if (todoInput.value.trim() === "") {
       alert("PLease enter new todo");
@@ -27,15 +29,13 @@ addBtn.addEventListener("click", () => {
         console.log(todos);
         todoInput.value = ""; //sıfırlıyoruz bir ul eklenince ikinciye geçince input bölümü 0 la
         };
-
-
 });
 
-const createListElement = (newTodo) => {
-    
+
+   const createListElement = (newTodo) => {
     //!elementleri oluştur ve bağla 
     
-    const li = document.createElement("li")
+    const li = document.createElement("li");
     li.id = newTodo.id // li.setAttribute("id", newTodo.id) aynı sonuç oluşan ıd yi li ye aktardık(kullanıcaz silme vs için)
     console.log(li);
 
@@ -46,7 +46,7 @@ const createListElement = (newTodo) => {
     console.log(li);
 
     const p = document.createElement("p");
-    p.textContent = todoInput.value//const pTextNode = document.createTextNode(newTodo.text);
+    p.textContent = todoInput.value  //const pTextNode = document.createTextNode(newTodo.text);
     //p.appendChild(pTextNode); //object içindeki text ten alıyoruz
     li.appendChild(p);
 
@@ -60,6 +60,7 @@ const createListElement = (newTodo) => {
     newTodo.completed && li.classList.add("checked") //aynı işi yapar
 };
 
+
 //açılışta eskileri ekranda görmek için 26. satırda ki devam
 const renderSavedTodos = () => {
   todos.forEach(todo => {
@@ -67,33 +68,51 @@ const renderSavedTodos = () => {
     
   });
 };
+renderSavedTodos();
+
 
 //parente verilen event childları yakalar target ile nerden geldiğini anlarız(hangi buton)
-todoUl.addEventListener("click", (e)=>{
+todoUl.addEventListener("click", (e) => {
+  console.log(e.target);
   //e.target hangi buton olduğu verir
   //domdan sil ve checked et
-  const id = e.target.parentElement.getAttribute("id")
-
-  if(e.target.classList.contains("fa-trash")) {
+  const id = e.target.parentElement.getAttribute("id");
+  //! event, bir delete butonundan geldi ise
+  if (e.target.classList.contains("fa-trash")) {
+    //? delete butonunun parent'ini DOM'dan sil
     e.target.parentElement.remove();
+
+    //? Dizinin ilgili elementini sil "localden sil"
+    todos = todos.filter((todo) => todo.id !== Number(id)); //id si buna eşit olmayanları yazdır diğerini sil yeni todos silinmiş haliyle olsun 
+
+
+    //? todos dizisinin son halini localStorage'e sakla
+    localStorage.setItem("TODOS", JSON.stringify(todos));
+    } else if (e.target.classList.contains("fa-check")) {
+    //! event, bir okey butonundan geldi ise
+    //? ilgili li elementinde checked adinda bir class'i varsa bunu sil
+    //?  aksi takdirde ekle (DOM)
+    e.target.parentElement.classList.toggle("checked");
+      //localde değiştir
+    todos.map((todo) => {
+        if(todo.id == id){
+            todo.completed = !todo.completed
+        }
+        localStorage.setItem("TODOS", JSON.stringify(todos));
+      })
+      console.log(todos)
+    }
+});
+ 
     
-    //localden sil
-    todos = todos.filter((todo)=> todo.id !== id) //id si buna eşit olmayanları yazdır diğerini sil yeni todos silinmiş haliyle olsun 
-
-  }else if(e.target.classList.contains("fa-check")){
-    e.target.parentElement.classList.toggle("checked")
-  }
-
-  });
-
-todoInput.addEventListener("keydown", (e) =>{
-  if(e.code === "Enter"){
+//? Enter tusu ile ekleme mumkun olsun
+todoInput.addEventListener("keydown", (e) => {
+  if (e.code === "Enter") {
     addBtn.click();
   }
-
 });
 
-window.onload = function (){
-  todoInput.focus();
-}
-
+//? Baslangicta input aktif olsun
+window.onload = function () {
+ todoInput.focus();
+};
