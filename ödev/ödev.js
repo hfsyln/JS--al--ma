@@ -129,3 +129,48 @@ let kisaltma = function (yazi) {
   return kisaHali;
 };
 console.log(kisaltma(yazi)); */
+
+//*******************************************************ÖDEV8 : parantezleri eşleme */
+
+let openers = ['(', '{', '[']
+let closers = [')', '}', ']']
+
+
+const sonuç = (girdi)=> {
+
+  newArray = girdi.split("");
+  console.log(newArray);
+for (let j = 0; j <= newArray.length; j++) {
+  console.log(j)
+  console.log(newArray)
+    for (let i = 0; i < openers.length; i++) {
+
+        if ((newArray[0] == openers[i]) && newArray[newArray.length - 1] == closers[i]) {
+
+            newArray.splice(0, 1)
+            console.log(newArray)
+
+            newArray.splice((newArray.length - 1), 1)
+            console.log(newArray)
+
+        } else if ((newArray[0] == openers[i]) && newArray[1] == closers[i]) {
+            newArray.splice(0, 1)
+            console.log(newArray)
+
+            newArray.splice(0, 1)
+            console.log(newArray)
+
+        }
+        
+    }  
+}
+  if (newArray.length > 0) {
+    console.log("false")
+  } else {
+  console.log("true");
+  }
+}; console.log(sonuç("()[]{()}"))  
+
+
+
+ 
