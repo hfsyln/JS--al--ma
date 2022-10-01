@@ -131,20 +131,20 @@ let kisaltma = function (yazi) {
 console.log(kisaltma(yazi)); */
 
 //*******************************************************ÖDEV8 : parantezleri eşleme */
-
+/*
 let openers = ['(', '{', '[']
 let closers = [')', '}', ']']
-
 
 const sonuç = (girdi)=> {
 
   newArray = girdi.split("");
   console.log(newArray);
-for (let j = 0; j <= newArray.length; j++) {
+
+  for (let j = 0; j <= newArray.length; j++) {
   console.log(j)
   console.log(newArray)
     for (let i = 0; i < openers.length; i++) {
-
+      console.log(i)
         if ((newArray[0] == openers[i]) && newArray[newArray.length - 1] == closers[i]) {
 
             newArray.splice(0, 1)
@@ -169,8 +169,32 @@ for (let j = 0; j <= newArray.length; j++) {
   } else {
   console.log("true");
   }
-}; console.log(sonuç("()[]{()}"))  
+}; sonuç("()[]{()}")
+   sonuç("(([]{}))")
+   console.log(sonuç("[[]{}"))*/
 
 
+
+/************** *********************ÖDEV 9*/
+//given array = [10, 5, 2, 7, 8, 7] and k = 3, we should get: [10, 7, 8, 8], since:
+//10 = max(10, 5, 2)
+//7 = max(5, 2, 7)
+//8 = max(2, 7, 8)
+//8 = max(7, 8, 7)
+
+let y = []
+/*let x = [6, 3, 5, 8, 10, -3,  -9]*/
+
+function arra (x) {
+  for(let i= 3; i<x.length; ){
+      let a = x.slice(0, i);
+      x.splice(0, 1);
+      /*console.log(a)*/
+      let büyük = Math.max(...a);
+      /*console.log(büyük)*/
+      y.push(büyük)
+      }console.log(y) 
+
+} arra([6, 3, 5, 8, 10, -3,  -9])
 
  
