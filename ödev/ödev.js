@@ -182,19 +182,20 @@ const sonuç = (girdi)=> {
 //8 = max(2, 7, 8)
 //8 = max(7, 8, 7)
 
-let y = []
+let z = []
 /*let x = [6, 3, 5, 8, 10, -3,  -9]*/
 
-function arra (x) {
-  for(let i= 3; i<x.length; ){
-      let a = x.slice(0, i);
+function arra (x, y) {
+  for(y; y<x.length; ){
+      let a = x.slice(0, y);
       x.splice(0, 1);
-      /*console.log(a)*/
+      console.log(a)
+      console.log(x)
       let büyük = Math.max(...a);
-      /*console.log(büyük)*/
-      y.push(büyük)
-      }console.log(y) 
+      console.log(büyük)
+      z.push(büyük)
+      }console.log(z) 
 
-} arra([6, 3, 5, 8, 10, -3,  -9])
+} arra([6, 3, 5, 8, 10, -3,  -9], 4)
 
  
